@@ -1,0 +1,37 @@
+@model IdentityServer.Pages.Login.LoginModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<div>
+    
+    <form method="post">
+        <fieldset>
+            <legend>Login</legend>
+            <input type="hidden" asp-for="ReturnUrl"/>
+            <div>
+                <label asp-for="Username">Username</label>
+                <input asp-for="Username"/>
+            </div>
+            <div>
+                <label asp-for="Password">Password</label>
+                <input type="Password" asp-for="Password" />
+            </div>
+            <div>
+                <input type="submit"/>
+            </div>
+        </fieldset>
+    </form>
+
+</div>
+</body>
+</html>
